@@ -31,7 +31,7 @@
 - Semantic_demand_pattern.py:确定每个预测地区的需求模式
 - Semantic_weighted_graph.py：确定需求权重图中的权重
 - Semantic_embedding：用LINE方法生成语义向量（C++文件为LINE方法的实现代码，<a href="https://github.com/tangjianpku/LINE" target="_blank">LINE方法源码地址</a>
-# 模型实现代码
+# 模型实现与数据集
 - DMVST_TFReacord.py:生成数据集
 - start.py:启动程序，运行该文件开始模型的训练
 - DMVST_Net_CNN.py:局部CNN的实现
