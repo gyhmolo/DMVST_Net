@@ -30,7 +30,7 @@
 - Temporal_context_data_merge.py:将天气、空气质量、星期几、是否为节假日信息合并在一起作为时间视图中每个时刻输入的上下文数据
 - Semantic_demand_pattern.py:确定每个预测地区的需求模式
 - Semantic_weighted_graph.py：确定需求权重图中的权重
-- Semantic_embedding：用LINE方法生成语义向量（C++文件为LINE方法的实现代码，<a href="https://github.com/tangjianpku/LINE" target="_blank">LINE方法源码地址</a>
+- Semantic_embedding.py：用LINE方法生成语义向量（C++文件为LINE方法的实现代码，<a href="https://github.com/tangjianpku/LINE" target="_blank">LINE方法源码地址</a>
 # 模型实现与数据集
 - DMVST_TFReacord.py:生成数据集
 - start.py:启动程序，运行该文件开始模型的训练
@@ -39,3 +39,8 @@
 - DMVST_Net_Semantic.py:语义视图的实现
 - DMVST_Net_forward.py:DMVST_Net模型的实现
 - DMVST_Net_backward.py:反向传播过程的实现
+# 代码使用
+- 把原始数据文件下载到根目录
+- 把数据预处理文件按照之前的介绍顺序依次执行（处理时间比较长，其中生成语义向量文件程序可以中途停止生成，之后只要重启Semantic_embedding.py就可以从上次生成的位置继续生成）
+- 运行DMVST_TFReacord.py，生成数据集
+- 运行start.py开始模型训练（训练过程中会不断写入两个文件records1、verifying_resault1，前者记录每喂入10个batch后模型的一些信息，后者记录验证时的信息）
